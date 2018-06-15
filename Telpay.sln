@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telpay.Web", "Telpay.Web\Telpay.Web.csproj", "{B24769FB-65BE-4479-BA9E-5F9A24FC2739}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telpay.IdentityServer", "Telpay.IdentityServer\Telpay.IdentityServer.csproj", "{6AE6B71D-E201-4D71-89E4-F5C4EC98981F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telpay.Business", "Telpay.Business\Telpay.Business.csproj", "{055E3003-41F6-45D9-906B-2E46B5EFAB36}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telpay.DAL", "Telpay.DAL\Telpay.DAL.csproj", "{73D0D8F9-30A8-4E9E-B3F6-5AD751CB648E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telpay.API", "Telpay.API\Telpay.API.csproj", "{82253852-61E7-450B-BD37-0097DADDEB10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B24769FB-65BE-4479-BA9E-5F9A24FC2739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24769FB-65BE-4479-BA9E-5F9A24FC2739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24769FB-65BE-4479-BA9E-5F9A24FC2739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24769FB-65BE-4479-BA9E-5F9A24FC2739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AE6B71D-E201-4D71-89E4-F5C4EC98981F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE6B71D-E201-4D71-89E4-F5C4EC98981F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE6B71D-E201-4D71-89E4-F5C4EC98981F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE6B71D-E201-4D71-89E4-F5C4EC98981F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055E3003-41F6-45D9-906B-2E46B5EFAB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055E3003-41F6-45D9-906B-2E46B5EFAB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055E3003-41F6-45D9-906B-2E46B5EFAB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055E3003-41F6-45D9-906B-2E46B5EFAB36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D0D8F9-30A8-4E9E-B3F6-5AD751CB648E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D0D8F9-30A8-4E9E-B3F6-5AD751CB648E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D0D8F9-30A8-4E9E-B3F6-5AD751CB648E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D0D8F9-30A8-4E9E-B3F6-5AD751CB648E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82253852-61E7-450B-BD37-0097DADDEB10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82253852-61E7-450B-BD37-0097DADDEB10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82253852-61E7-450B-BD37-0097DADDEB10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82253852-61E7-450B-BD37-0097DADDEB10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00FDB33F-21F2-4E30-A6A4-38C3DDD5FD1F}
+	EndGlobalSection
+EndGlobal

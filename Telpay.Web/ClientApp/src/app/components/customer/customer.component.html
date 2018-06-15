@@ -1,0 +1,120 @@
+<p>
+  Customers page!
+</p>
+
+
+<div class="card">
+  <div class="card-body">
+    <div class="container-fluid text-center">
+      <button type="button" class="btn waves-effect waves-light btn-success right text-center"
+              (click)="add(template)">
+        Add Customer
+      </button>
+      <button type="button" class="btn waves-effect waves-light btn-default right text-center pull-right"
+              (click)="logout()">
+        Log out
+      </button>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<div class="col-12">
+  <div class="card">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th class="text-nowrap">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let customer of customers; let i = index">
+              <td> {{ i + 1 }} </td>
+              <td> {{ customer.name }} </td>
+              <td> {{ customer.address }} </td>
+              <td class="text-nowrap" style="width: 1px;">
+                <button type="button" style="cursor: pointer" class="btn btn-warning" (click)="openModal(template, customer)">Edit</button>
+                <button type="button" style="cursor: pointer" class="btn btn-danger" (click)="openModal(deleteTemplate, customer)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title">{{ isEditMode ? 'Edit' : 'Add' }} Customer info</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label class="control-label col-sm-2 text-muted" for="Name">Name</label>
+      <div class="col-sm-10">
+        <input class="form-control" type="text" id="name" [(ngModel)]="selectedCustomer.name"
+               required minlength="3" #name="ngModel">
+        <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+          Name required. Minimum 3 characters
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="form-group">
+      <label class="control-label col-sm-2 text-muted" for="address">Address</label>
+      <div class="col-sm-10">
+        <input class="form-control" type="text" id="address" [(ngModel)]="selectedCustomer.address"
+               required minlength="3" #address="ngModel">
+        <div [hidden]="address.valid || address.untouched" class="alert alert-danger">
+          Address required. Minimum 3 characters
+        </div>
+        <!-- Added for SaveStatus -->
+        <div [hidden]="saveStatus.successful" class="alert alert-danger">
+          Message : {{ saveStatus.message}}
+        </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="modalRef.hide()">Cancel</button>
+    <button type="button" class="btn btn-success"
+            [disabled]="name.invalid || address.invalid"
+            (click)="save()">Save</button>
+  </div>
+</ng-template>
+
+
+<ng-template #deleteTemplate>
+  <div class="modal-header">
+    <h4 class="modal-title warning">Warning</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-6" style="margin-left: 30px">
+        Are you sure that want to delete this item?
+      </div>
+      <div [hidden]="saveStatus.successful" class="alert alert-danger">
+        Message : {{ saveStatus.message }}
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="modalRef.hide()">Cancel</button>
+    <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+  </div>
+</ng-template>
